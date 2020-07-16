@@ -1,2 +1,2 @@
-# myprojact
+# myproject
 test
