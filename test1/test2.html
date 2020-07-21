@@ -2,34 +2,40 @@
 <html>
 <head>
 <style>
-img {
-  width: 100px;
+div {
+  width: 300px;
   height: 100px;
-  background-color: ;
-  position: relative;
-  animation-name: example;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background-color: yellow;
+  border: 1px solid black;
 }
 
-@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+div#myDiv1 {
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+  transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+}
+
+div#myDiv2 {
+  -ms-transform: matrix(1, 0, 0.5, 1, 150, 0); /* IE 9 */
+  transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
 }
 </style>
 </head>
 <body>
 
-<h1>The rotateZ() Method</h1>
-<p>The rotateZ() method rotates an element around its Z-axis at a given degree.</p>
-<img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/sky.jpg?raw=true">
-<p><b>Note:</b> Internet Explorer 9 (and earlier versions) does not support the rotateZ() method.</p>
+<h1>The matrix() Method</h1>
+<p>The matrix() method combines all the 2D transform methods into one.</p>
+
+<div>
+This a normal div element.
+</div>
+
+<div id="myDiv1">
+Using the matrix() method.
+</div>
+
+<div id="myDiv2">
+Another use of the matrix() method.
+</div>
 
 </body>
 </html>
