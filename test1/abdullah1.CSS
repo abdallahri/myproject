@@ -53,7 +53,7 @@ ul li:hover {background: #555;}
 ul li:hover ul {display: block;}
 ul li ul {
   position: absolute;
-  width: 200px;
+  width: 300px;
   display: none;
 }
 ul li ul li { 
@@ -71,7 +71,7 @@ ul li ul li:hover {background: #666;}
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 220px;
   background-color: black;
   color: #fff;
   text-align: center;
