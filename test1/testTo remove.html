@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
 <style>
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+* {  box-sizing:border-box;
+margin: 0px;
+  padding: 0px;
+  }
+body {
+  background-color: gray;
+  
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+#box {
+  background-color: blue;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 40px;
+  width: 400px;
+  height: 50px;
+  overflow: auto;
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
+}
+#content {
+  background-color: #90EE90; /*green*/
+  word-wrap: break-word;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+h1 {
+  margin-bottom: 30px;
 }
+
 </style>
-<body style="text-align:center;">
+</head>
+<body>
 
-<p>Move the mouse over the text below:</p>
+<h1>Box Model</h1>
 
-<div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span>
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. error: failed to push some refs to 'https://github.com/abdallahri<# /ASasaSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+    myproject.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git </div>
 </div>
-
-<p>Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
-
+<br>
+<br>
+<div style="background-color: red ; padding: 10px 10px 10px 10px ;"></div>
+<br><br>
+<div style="width:100%;">
+        <div style="float:left;width:30%; background:red;">...something something something  random text</div>
+        <div style="float:none; width: 90%; background:yellow; word-wrap:normal ;" > text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text  </div>
+    </div>
 </body>
 </html>
+
