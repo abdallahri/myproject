@@ -2,59 +2,62 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>The Box Model</title>
+<title>Media Queries</title>
 <style>
-* {  box-sizing:border-box;
-margin: 0px;
-  padding: 0px;
-  }
-body {
-  background-color: gray;
-  
-}
 
-#box {
-  background-color: blue;
-  border: 5px solid black;
-  padding: 10px;
-  margin: 40px;
-  width: 400px;
-  height: 50px;
-  overflow: auto;
-
-}
-#content {
-  background-color: #90EE90; /*green*/
-  word-wrap: break-word;
-}
-
+/********** Base styles **********/
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+#p1 {
+  background-color: #A52A2A;
+  width: 300px;
+  height: 300px;
+}
+#p2 {
+  background-color: #DEB887;
+  width: 50px;
+  height: 50px;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  #p1 {
+    width: 80%;
+  }
+  #p2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #p1 {
+    width: 50%;
+  }
+  #p2 {
+    width: 100px;
+    height: 100px;
+  }
+  body {
+    background-color: blue;
+  }
 }
 
 </style>
 </head>
 <body>
+<h1>Media Queries</h1>
 
-<h1>Box Model</h1>
+<p id="p1"></p>
+<p id="p2"></p>
 
-<div id="box">
-  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. error: failed to push some refs to 'https://github.com/abdallahri<# /ASasaSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-    myproject.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git </div>
-</div>
-<br>
-<br>
-<div style="background-color: red ; padding: 10px 10px 10px 10px ;"></div>
-<br><br>
-<div style="width:100%;">
-        <div style="float:left;width:30%; background:red;">...something something something  random text</div>
-        <div style="float:none; width: 90%; background:yellow; word-wrap:normal ;" > text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text  </div>
-    </div>
 </body>
 </html>
-

@@ -6,16 +6,16 @@
 	<!--<link rel="stylesheet" href="style1.css">-->
 	<style type="text/css">
 		
-*{margin: 0px;
-padding: 0px;
+*{
 box-sizing: border-box;}
-body {
+.skybackground {
   background-image: url('https://github.com/abdallahri/myproject/blob/gh-pages/test1/sky.jpg?raw=true');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
+ 
 }
-img {
+.moon-animation img{
   width: 300px;
   height: 300px;
   position: relative;
@@ -25,8 +25,8 @@ img {
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction:alternate;
+ 
 }
-
 @keyframes moon {
   0%   { left:0px; top:0px;width: 50px; height:50px;}
   25%  { left:85%; top:0px}
@@ -34,111 +34,19 @@ img {
   75%  {left:75%; top:0px;}
   100% {left:0px; top:0px;}
 }
-.facts {
-	 width: 100%; height: 100%;
-  color:white;background-color:#808080;
-  font-family: "Lucida Console", Courier, monospace;
-  font-size: 25px;
-  font-weight: 5px;
-}
-#moonimg{
-
-  height: 300px;
-  width:300px;
- 
-}
-.fa {background-color: #808080;
-text-align: left;
-}
-div a {
-
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  display:inline-block;
-
-}
-ul {
-
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-ul li {display: inline-block;}
-ul li:hover {background: #555;}
-ul li:hover ul {display: block;}
-ul li ul {
-  position: absolute;
-  width: 300px;
-  display: none;
-}
-ul li ul li { 
-  background: #555; 
-  display: block; 
-}
-ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: #666;}
-#about{
-  .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-}
-#h1 .facts {
-	text-transform: uppercase;
-}
 	</style>
 
 </head>
 <body>
-	<div class="fa">
-  <a href="#">Sun Group</a>
-  <ul>
-    <li>
-      <a href="#">Display list</a>
-      <ul>
-        <li><a href="#">Facts about the sun.</a></li>
-        <li><a href="#">Facts about Mars.</a></li>
-        <li><a href="#">Facts about Jupiter .</a></li>
-        <li><a href="#">Facts about Pluto.</a></li>
-        <li><a href="#">Facts about Mercury.</a></li>
-      </ul>
-    </li>
-    <li> <a id="about" href="https://www.facebook.com/profile.php?id=100010765125750"> About </a></li>
-  </ul>
-</div>
-	<div id="moonimg" style="width: 100%; height: 300px;overflow: visible ;">	<img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/moon_PNG20.png?raw=true"> 
+  
+<div class="skybackground" >
+  <div id="moonimg" style="width: 100%; height: 300px;overflow: visible ;">
+     <div class="moon-animation"  >
+      <img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/moon_PNG20.png?raw=true"> 
+    </div>
+      
 </div>	
-	<div class="facts">
-<h1 id="h1" style="font-weight: inherit; margin: 0; text-align: center; text-transform: uppercase;">  Facts About The Moon</h1>
-<ul style="text-align: left;">
-<li style="color: yellow; ">The Moon is Earth’s only natural satellite and the fifth largest moon in the solar system.</li><br>
-<li style="color: blue;">The Moon’s presence helps stabilize our planet’s wobble, which helps stabilize our climate.</li><br>
-<li style="color: green;">The Moon’s distance from Earth is about 240,000 miles (385,000km).</li><br>
-<li style="color: black;">The Moon has a very thin atmosphere called an exosphere.</li><br>
-<li style="color: red; text-transform:  capitalize;">The Moon’s entire surface is cratered and pitted from impacts.</li>
-</ul>
 </div>
+
 </body>
 </html>
