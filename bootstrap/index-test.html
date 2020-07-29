@@ -108,6 +108,13 @@
     function myFunction() {
        var element = document.body;
        element.classList.toggle("dark-mode");
+        var x = document.getElementById("darkmodebtn");
+  if (x.innerHTML === "dark mode") {
+    x.innerHTML = "light mode";
+  } else {
+    x.innerHTML = "dark mode";
+  }
+
     }
     </script>
    
@@ -127,8 +134,8 @@
 
     <div class="container">  
       
-      <button onclick="myFunction()" type="button" class="btn btn-"function="collapse bg-dark">light</button>
-<button type="button" class="btn btn-sm btn-outline-secondary" function="collapse bg-dark">Dark</button>
+      <button onclick="myFunction()" type="button" id="darkmodebtn" class="btn btn-"function="collapse bg-dark">dark mode</button>
+
     </div>
     
     
@@ -273,11 +280,6 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
                 <small class="text-muted">
-                     <script>
-                  var date = document.lastModified;
-                  document.write("Last Modified: "+date);
-               </script>
-               
               </small>
               </div>
             </div>
