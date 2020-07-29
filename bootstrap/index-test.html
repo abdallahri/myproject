@@ -28,7 +28,7 @@
   height: 200px;
   position: relative;
   animation-name: moon;
-  animation-duration: 15s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -36,15 +36,12 @@
  
 }
 @keyframes moon {
-  0%   { left:0px; top:0px;width: 50px; height:50px;}
-  25%  { left:85%; top:0px}
-  50% {left:0px; top:0px;}
-  75%  {left:75%; top:0px;}
+  0%   { left:0px; top:50px;width: 50px; height:50px;}
+  25%  { left:85%; top:50px}
+  50% {left:0px; top:50px;}
+  75%  {left:75%; top:10px;}
   100% {left:0px; top:0px;}
 }
-
-
-
 
       *{box-sizing: border-box}
       .bd-placeholder-img {
@@ -60,25 +57,43 @@
           font-size: 56px;
         }
       }
-
-  @media (max-width:622PX){
+@media screen and (max-width:768px){
     .moon-animation img{
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
 }
    .skybackground {
-    height: 100px;
+    height: 150px;
   }
 
 @keyframes moon {
-  0%   { left:0px; top:0px;width: 25px; height:25px;}
-  25%  { left:65%; top:0px}
-  50% {left:0px; top:0px;}
-  75%  {left:55%; top:0px;}
-  100% {left:0px; top:0px;}
+  0%   { left:0px; top:60px;width: 40px; height:40px;}
+  25%  { left:85%; top:50px}
+  50% {left:0px; top:40px;}
+  75%  {left:80%; top:25px;}
+  100% {left:0px; top:20px;}
 }
 
 }
+  @media screen and (max-width:622PX){
+    .moon-animation img{
+  width: 50px;
+  height: 50px;
+}
+   .skybackground {
+    height: 70px;
+  }
+
+@keyframes moon {
+  0%   { left:0px; top:10px;width: 25px; height:25px;}
+  25%  { left:85%; top:10px}
+  50% {left:0px; top:10px;}
+  75%  {left:75%; top:10px;}
+  100% {left:0px; top:10px;}
+}
+
+}
+ 
 
 
 .dark-mode .card {
@@ -148,7 +163,7 @@
 <div class="skybackground container" >
   <div class="moonimg" style="width: 100%; height: 200px;overflow: visible ;">
      <div class="moon-animation"  >
-      <img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/moon_PNG20.png?raw=true"> 
+      <img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/moon_PNG20.png?raw=true" > 
     </div>
       
 </div>	
