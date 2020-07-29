@@ -1,63 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Media Queries</title>
-<style>
+<nav>
+  <div class="theme-switch-wrapper">
+       <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <div class="slider round"></div>
+  </label>
+    <em>Enable Dark Mode!</em>
+  </div>
 
-/********** Base styles **********/
-h1 {
-  margin-bottom: 15px;
-}
+</nav>  
+<section>
+    <article class="post">
+      <h1>The Principles of Good Design</h1>
+      <p class="post-meta">Circa 2014 <span>by</span> Ian Daniel Stewart</p>
 
-p {
-  border: 1px solid black;
-  margin-bottom: 15px;
-}
-#p1 {
-  background-color: #A52A2A;
-  width: 300px;
-  height: 300px;
-}
-#p2 {
-  background-color: #DEB887;
-  width: 50px;
-  height: 50px;
-}
+      <p>Is <strong>beauty</strong> objectively true? Are there principles you can use to guide you to it in your work? Can designers from both the sciences and the arts look at each others work and find <strong class="sevenhundred">beauty</strong>? These are important questions for all designers.</p>
 
-/********** Large devices only **********/
-@media (min-width: 1200px) {
-  #p1 {
-    width: 80%;
+      <p>For those of us who design things … we need to be able to recognize it. We need good taste to make good things. Instead of treating <strong class="eighthundred">beauty</strong> as an airy abstraction, to be either blathered about or avoided depending on how one feels about airy abstractions, let’s try considering it as a practical question: how do you make good stuff?</p>
+ <a href="#">Read More</a>
+  </article>
+</section>
+<script>Enableconst toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  const currentTheme = localStorage.getItem('theme');
+  
+  if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    
+      if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+      }
   }
-  #p2 {
-    width: 150px;
-    height: 150px;
+  
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      }
+      else {        document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+      }    
   }
-}
-
-
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  #p1 {
-    width: 50%;
-  }
-  #p2 {
-    width: 100px;
-    height: 100px;
-  }
-  body {
-    background-color: blue;
-  }
-}
-
-</style>
-</head>
-<body>
-<h1>Media Queries</h1>
-
-<p id="p1"></p>
-<p id="p2"></p>
-
-</body>
-</html>
+  
+  toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
