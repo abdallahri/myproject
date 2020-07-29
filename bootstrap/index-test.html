@@ -24,8 +24,8 @@
  
 }
 .moon-animation img{
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   position: relative;
   animation-name: moon;
   animation-duration: 10s;
@@ -39,8 +39,8 @@
   0%   { left:0px; top:50px;width: 50px; height:50px;}
   25%  { left:85%; top:50px}
   50% {left:0px; top:50px;}
-  75%  {left:75%; top:30px;}
-  100% {left:0px; top:20px;}
+  75%  {left:75%; top:43px;}
+  100% {left:0px; top:33px;}
 }
 
       *{box-sizing: border-box}
@@ -94,7 +94,6 @@
 
 }
  
-
 
 .dark-mode .card {
   background-color: rgb(95, 95, 95);
@@ -151,10 +150,10 @@
        var element = document.body;
        element.classList.toggle("dark-mode");
         var x = document.getElementById("darkmodebtn");
-  if (x.innerHTML === "dark mode") {
-    x.innerHTML = "light mode";
+  if (x.innerHTML === "Dark mode") {
+    x.innerHTML = "Light mode";
   } else {
-    x.innerHTML = "dark mode";
+    x.innerHTML = "Dark mode";
   }
 
     }
@@ -174,10 +173,11 @@
 
   
 
-    <div class="container">  
+    <div class="container">
+    <div class="d-flex justify-content-end"> 
       
-      <button onclick="myFunction()" type="button" id="darkmodebtn" class="btn btn-"function="collapse bg-dark">dark mode</button>
-
+      <button onclick="myFunction()" type="button" id="darkmodebtn" class="btn btn-secondary float-right"function="collapse bg-dark">Dark mode</button>
+</div> 
     </div>
     
     
