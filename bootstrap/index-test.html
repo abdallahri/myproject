@@ -60,8 +60,28 @@
           font-size: 56px;
         }
       }
-  
-    .dark-mode .card {
+
+  @media (max-width:622PX){
+    .moon-animation img{
+  width: 100px;
+  height: 100px;
+}
+   .skybackground {
+    height: 100px;
+  }
+
+@keyframes moon {
+  0%   { left:0px; top:0px;width: 25px; height:25px;}
+  25%  { left:65%; top:0px}
+  50% {left:0px; top:0px;}
+  75%  {left:55%; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+}
+
+
+.dark-mode .card {
   background-color: rgb(95, 95, 95);
   color: white;
   background:#343a40;
@@ -77,11 +97,11 @@
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
+        <div class="col-sm-8 col-md-7 py-3">
           <h4 class="text-white">About</h4>
           <p class="text-muted">some text here some text heresome text heresome text heresome text heresome text heresome text heresome text heresome text heresome text heresome text here.</p>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
+        <div class="col-sm-4 offset-md-1 py-3">
           <h4 class="text-white">Contact</h4>
           <ul class="list-unstyled">
             <li><a href="https://twitter.com/abdallahalri" class="text-white" target="_blank">Follow on Twitter</a></li>
@@ -92,12 +112,17 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="navbar navbar-dark bg-dark shadow-sm ">
     <div class="container d-flex justify-content-between">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Solar Group</strong>
+       <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" >
+  <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
+  <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/> </svg>
+   
+        <strong>  &nbsp Solar Group</strong>
       </a>
+
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -121,7 +146,7 @@
     </script>
    
 <div class="skybackground container" >
-  <div id="moonimg" style="width: 100%; height: 200px;overflow: visible ;">
+  <div class="moonimg" style="width: 100%; height: 200px;overflow: visible ;">
      <div class="moon-animation"  >
       <img src="https://github.com/abdallahri/myproject/blob/gh-pages/test1/moon_PNG20.png?raw=true"> 
     </div>
