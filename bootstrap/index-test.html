@@ -100,6 +100,10 @@
   color: white;
   background:#343a40;
 }
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
+}
     </style>
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
@@ -331,16 +335,43 @@
   </div>
 
 </main>
+<div class="row">
+  <div class="container">
+        <div class="form-group float-right">
+        <div class="col-sm-7 col-md-7">
+          <div class="input-group container">
+            <div id="radioBtn" class="btn-group">
+              <a class="btn btn-primary btn-sm active" data-toggle="happy" data-title="Y">YES</a>
+              <a class="btn btn-primary btn-sm notActive" data-toggle="happy" data-title="N">NO</a>
+            </div>
+            <input type="hidden" name="happy" id="happy">
+          </div>
+        </div>
+      </div>   
+  
+<script type="text/javascript">
+  $('#radioBtn a').on('click', function(){
+    var sel = $(this).data('title');
+    var tog = $(this).data('toggle');
+    $('#'+tog).prop('value', sel);
+    
+    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+})
+</script>
+</div>
+</div>
+
+
+
 
 <footer class="text-muted">
   <div class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    
+    <div><a href="#" class="btn btn-lg btn-info float-right">Back to top <span class="glyphicon glyphicon-chevron-right"></span></a>
   </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
 
       <script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.slim.min.js"><\/script>')</script>
       <script src="bootstrap.bundle.js"></script></body>
