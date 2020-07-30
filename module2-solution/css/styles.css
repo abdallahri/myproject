@@ -28,7 +28,8 @@
 }
 
 #infospan{
-	
+	margin: 0px;
+	padding: 7px;
 	float: right;
 	
 }
