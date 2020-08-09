@@ -36,11 +36,13 @@ background-color: white;
     border: 1px ;
   width: 33.33%;
   }
-  .col2 {float: left;
+  .col2 {
+    float: left;
     border: 1px  black;
      width: 33.33%; 
   }
-  .col3{float: left;
+  .col3 {
+    float: left;
     border: 1px black;
       width: 33.33%; 
   }
@@ -51,10 +53,12 @@ background-color: white;
     float: left;
   width: 50%;
   }
-  .col2 {float: left; 
+  .col2 {
+    float: left; 
      width: 50%; 
   }
-  .col3{float: left;
+  .col3{
+    float: left;
     border: 1px  black;
       width: 102.5%; 
   }
@@ -64,10 +68,12 @@ background-color: white;
     float: left;
   width: 100%;
   }
-  .col2 {float: left;
+  .col2 {
+    float: left;
     width: 100%; 
   }
-  .col3{float: left; 
+  .col3{
+    float: left; 
       width: 100%; 
       margin-right: 16px;
   }
